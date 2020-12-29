@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const Customer = mongoose.model('Customer', new mongoose.Schema({
     name: String,
     email:String,
-    phone:Number,
+    phone:String,
     birthDate:String
    
   }));
@@ -14,7 +14,7 @@ const Customer = mongoose.model('Customer', new mongoose.Schema({
     const schema = {
       name: Joi.string().min(5).max(50).required(),
       email: Joi.string().min(5).max(50).required(),
-      phone: Joi.number().min(9).max(15).required(),
+      phone: Joi.string().min(9).max(15).required(),
       birthDate: Joi.string().min(5).max(50).required()
 
     };
